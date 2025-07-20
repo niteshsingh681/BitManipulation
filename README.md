@@ -23,3 +23,10 @@ This repo consist of a kind of a summary of all basic concept that involve in Bi
 10)	Count number of set bits (C++ user) :  int ans= __builtin_popcount(Num);
 
 11)	Count number of set bits (Other language) :  int count=0; while(Num!=0){Num=(Num&(Num-1)); count++} return count;
+ Some Important question
+ nums = [1, 2, 1, 3, 5, 2],  every no appear twice except two no ,return that  two number
+Approch
+* xor all the element
+* find the rightmost set bit (xorall & -xorall)=>this bit help u to segregate the total element of array into two part ,one that all element has the same bit as a set and other have not the same bit
+* num1=num1^num   iff (num1 & rightmost bit ans)
+* num2=num2^num
